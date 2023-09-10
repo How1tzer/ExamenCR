@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossy Road</title>
+    <style>
+        .body {
+            background-color: rgb(24, 21, 38);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .single-image {
+            display: none;
+        }
+
+        #mycanvas {
+            background-color: rgb(217, 213, 213);
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body class="body">
+    <canvas width="700" height="700" id="mycanvas"></canvas>
+
+    <script>
+        var canvas = document.getElementById('mycanvas');
+        
+        // Canvas
+        window.requestAnimationFrame = (function () {
+            return window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            function (callback) {
+                window.setTimeout(callback, 17);
+            };
+        }());
+
+        if (canvas.getContext) {
+            var ctx = canvas.getContext("2d");
+            
+            // Pantalla
+            function animate() {
+                //Contenido
+
+                requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
+    </script>
+</body>
+</html>
