@@ -23,12 +23,18 @@
     </style>
 </head>
 <body class="body">
+    <!--Canvas margin-->
     <canvas width="700" height="700" id="mycanvas"></canvas>
 
+    <!--Scripts a llamar-->
+    <script src="jugador.js"></script>
+
+    <!--Pantalla-->
     <script>
+        
         var canvas = document.getElementById('mycanvas');
         
-        // Canvas
+        //Funcion de canvas
         window.requestAnimationFrame = (function () {
             return window.requestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
@@ -38,18 +44,34 @@
             };
         }());
 
+        const up_default = new Image();
+        up_default.src = 'media/ranaUp_Default.gif';
+
+        class Jugador {
+        constructor(outfit, jx, jy, height, width) {
+        this.outfit = outfit;
+        this.jx = jx;
+        this.jy = jy;
+        this.height = height;
+        this.width = width;
+        }
+    }
+    const jugador1 = new Jugador(up_default, 330, 630, 35, 30);
+        //Todo lo que aparece en pantalla
         if (canvas.getContext) {
             var ctx = canvas.getContext("2d");
             
             // Pantalla
             function animate() {
                 //Contenido
-
+                ctx.drawImage(jugador1.outfit, jugador1.jx-31, jugador1.jy-33,100,100);
+                
                 requestAnimationFrame(animate);
             }
 
             animate();
         }
     </script>
+
 </body>
 </html>

@@ -1,5 +1,6 @@
 
 
+/* 
 function colision(obstaculo) {
     ctx.beginPath();
     ctx.fillStyle = obstaculo.color;
@@ -11,3 +12,4 @@ function colision(obstaculo) {
         jugador1.direct = "";
     }
 }
+*/
