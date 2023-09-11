@@ -31,10 +31,12 @@
 
     <!--Pantalla-->
     <script>
-        
+        //Varibales:
+
+
+
+        //Funcion de canvas:
         var canvas = document.getElementById('mycanvas');
-        
-        //Funcion de canvas
         window.requestAnimationFrame = (function () {
             return window.requestAnimationFrame ||
             window.webkitRequestAnimationFrame ||
@@ -44,13 +46,19 @@
             };
         }());
 
-        //Todo lo que aparece en pantalla
         if (canvas.getContext) {
             var ctx = canvas.getContext("2d");
-            
+
+
             // Pantalla
             function animate() {
                 //Contenido
+
+                //Permite borrar el cuadro anterior:
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                
+                //Funciones a llamar:
+                direccion(jugador1);
                 update(jugador1);
                 requestAnimationFrame(animate);
             }
