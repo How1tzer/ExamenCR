@@ -28,6 +28,7 @@
 
     <!--Scripts a llamar-->
     <script src="jugador.js"></script>
+    <script src="maps.js"></script>
 
     <!--Pantalla-->
     <script>
@@ -58,6 +59,7 @@
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
                 
                 //Funciones a llamar:
+                mapas(mapa1);
                 direccion(jugador1);
                 update(jugador1);
                 requestAnimationFrame(animate);
