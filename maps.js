@@ -1,3 +1,5 @@
+//mapas
+
 class mapa {
     constructor(source, mx, my, height, width) {
         this.source = source;
