@@ -103,7 +103,6 @@ function direccion (jugador){
             moveRight = false;
         }
     });
-    console.log(maxY);
 }
 
 function update(jugador) {

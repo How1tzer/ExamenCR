@@ -3,8 +3,8 @@
 //frame de vidas
 
 //default
-const vidas_default = new Image();
-vidas_default.src = 'media/vida_default.png';
+const corazon = new Image();
+corazon.src = 'media/vida_default.png';
 
 class vidas {
     constructor(outfit, vx, vy, height, width) {
@@ -16,9 +16,11 @@ class vidas {
     }
 }
 
-const vidas_default = new vidas(vidas_default, 50, 50, 50, 50);
+const vidas_default = new vidas(corazon, 5, 5, 100, 100);
 
 function contadorVidas(vidas) {
 
-    ctx.drawImage(vidas.outfit, vidas.jx, vidas.jy, vidas.height, vidas.width);
+    ctx.drawImage(vidas.outfit, vidas.vx, vidas.vy, vidas.height, vidas.width);
+    ctx.drawImage(vidas.outfit, vidas.vx+30, vidas.vy, vidas.height, vidas.width);
+    ctx.drawImage(vidas.outfit, vidas.vx+60, vidas.vy, vidas.height, vidas.width);
 }

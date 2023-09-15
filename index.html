@@ -29,6 +29,8 @@
     <!--Scripts a llamar-->
     <script src="jugador.js"></script>
     <script src="maps.js"></script>
+    <script src="vida.js"></script>
+    <script src="enemigos.js"></script>
 
     <!--Pantalla-->
     <script>
@@ -62,7 +64,10 @@
                 mapas(mapa1);
                 direccion(jugador1);
                 update(jugador1);
+                contadorVidas(vidas_default);
+                enemigos(carroAzul_left1,carroRed_left2,jugador1,carroRed_left3);
                 requestAnimationFrame(animate);
+                
             }
 
             animate();
