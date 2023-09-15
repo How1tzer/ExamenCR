@@ -10,7 +10,7 @@ class mapa {
 
 //Src de los mapas
 const map1 = new Image();
-map1.src = 'media/boceto.png';
+map1.src = 'media/mapa1.png';
 
 //mapas settings
 const mapa1 = new mapa(map1, 0, 0, 700, 700);
