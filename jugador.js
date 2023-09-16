@@ -5,7 +5,9 @@ var moveUp = false;
 var moveDown = false;
 var moveLeft = false;
 var moveRight = false;
-const velocidadJugador = .5; // Ajusta la velocidad de movimiento como desees
+const velocidadJugador = .5; 
+
+//capacidad de movimiento default
 var maxY = 0; //max 13
 var maxX =0; //max 6
 
@@ -103,6 +105,12 @@ function direccion (jugador){
             moveRight = false;
         }
     });
+
+    if(maxY==13){
+        nivel = nivel+1;
+        maxY = 0;
+        jugador.jy = 665;
+    }
 }
 
 function update(jugador) {
@@ -163,3 +171,5 @@ function updateEspacial(jugador) {
         jugador.jx += velocidadJugador;
     }
 }
+
+

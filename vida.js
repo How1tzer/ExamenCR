@@ -1,5 +1,8 @@
 //vidas
 
+//variables
+var hp = 3;
+
 //frame de vidas
 
 //default
@@ -20,7 +23,24 @@ const vidas_default = new vidas(corazon, 5, 5, 100, 100);
 
 function contadorVidas(vidas) {
 
-    ctx.drawImage(vidas.outfit, vidas.vx, vidas.vy, vidas.height, vidas.width);
-    ctx.drawImage(vidas.outfit, vidas.vx+30, vidas.vy, vidas.height, vidas.width);
-    ctx.drawImage(vidas.outfit, vidas.vx+60, vidas.vy, vidas.height, vidas.width);
+    if(hp==3){
+        ctx.drawImage(vidas.outfit, vidas.vx, vidas.vy, vidas.height, vidas.width);
+        ctx.drawImage(vidas.outfit, vidas.vx+30, vidas.vy, vidas.height, vidas.width);
+        ctx.drawImage(vidas.outfit, vidas.vx+60, vidas.vy, vidas.height, vidas.width);
+    }
+
+    if(hp==2){
+        ctx.drawImage(vidas.outfit, vidas.vx, vidas.vy, vidas.height, vidas.width);
+        ctx.drawImage(vidas.outfit, vidas.vx+30, vidas.vy, vidas.height, vidas.width);
+        
+    }
+
+    if(hp==1){
+        ctx.drawImage(vidas.outfit, vidas.vx, vidas.vy, vidas.height, vidas.width);
+        location.reload(true);
+        
+    }
+
+    
+
 }

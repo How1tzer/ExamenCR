@@ -11,11 +11,20 @@ class mapa {
 }
 
 //Src de los mapas
+
+//mapa 1
 const map1 = new Image();
 map1.src = 'media/mapa1.png';
 
+//mapa 2
+const map2 = new Image();
+map2.src = 'media/mapa2.png';
+
 //mapas settings
+
+//mapa 1
 const mapa1 = new mapa(map1, 0, 0, 700, 700);
+const mapa2 = new mapa(map2, 0, 0, 700, 700);
 
 
 

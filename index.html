@@ -34,11 +34,14 @@
 
     <!--Pantalla-->
     <script>
-        //Varibales:
+        // Variables:
+        var nivel = 1;
+        var secondsRemaining = 0;
+        var timerInterval;
+        var paused = false;
+        var condicion = false;
 
-
-
-        //Funcion de canvas:
+        // Función de canvas:
         var canvas = document.getElementById('mycanvas');
         window.requestAnimationFrame = (function () {
             return window.requestAnimationFrame ||
@@ -52,27 +55,89 @@
         if (canvas.getContext) {
             var ctx = canvas.getContext("2d");
 
+            // Función para el temporizador:
+            function Timer() {
+                clearInterval(timerInterval);
+
+                timerInterval = setInterval(() => {
+                    if (!paused) {
+                        const displayMinutes = Math.floor(secondsRemaining / 60);
+                        const displaySeconds = secondsRemaining % 60;
+
+                        if (condicion) {
+                            clearInterval(timerInterval);
+                        } else {
+                            secondsRemaining++;
+                        }
+                    }
+                }, 1000);
+            }
+
+            Timer();
+
+            // Función para dibujar el tiempo en el canvas:
+            function drawTime() {
+                ctx.fillStyle = 'white';
+                ctx.font = '18px Arial';
+                ctx.fillText("Tiempo:", 530, 30);
+                const displayMinutes = Math.floor(secondsRemaining / 60);
+                const displaySeconds = secondsRemaining % 60;
+                ctx.fillText(`${String(displayMinutes).padStart(2, '0')}:${String(displaySeconds).padStart(2, '0')}`,530,50);
+            }
 
             // Pantalla
             function animate() {
-                //Contenido
+                // Contenido
 
-                //Permite borrar el cuadro anterior:
+                // Permite borrar el cuadro anterior:
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
-                //Funciones a llamar:
-                mapas(mapa1);
-                direccion(jugador1);
-                update(jugador1);
-                contadorVidas(vidas_default);
-                enemigos(carroAzul_left1,carroRed_left2,jugador1,carroRed_left3);
+
+                // Funciones a llamar:
+                if (nivel == 1) {
+                    mapas(mapa1);
+                    direccion(jugador1);
+                    update(jugador1);
+                    contadorVidas(vidas_default);
+                    enemigos(
+                        carroAzul_left1,
+                        carroRed_left2,
+                        jugador1,
+                        carroRed_left3,
+                        carroAzul_left4,
+                        blackRight5,
+                        blackRight6,
+                        blackRight7,
+                        redRight8,
+                        redRight9
+                    );
+                }
+
+                if (nivel == 2) {
+                    mapas(mapa2);
+                    direccion(jugador1);
+                    update(jugador1);
+                    contadorVidas(vidas_default);
+                    enemigos(
+                        hamster_left1,
+                        hamster_left2,
+                        jugador1,
+                        hamster_left3,
+                        hamster_left4,
+                        hamster_Right5,
+                        hamster_Right6,
+                        hamster_Right7,
+                        hamster_Right8,
+                        hamster_Right9);
+                }
+
+                // Dibujar el tiempo
+                drawTime();
+
                 requestAnimationFrame(animate);
-                
             }
 
             animate();
         }
     </script>
-
 </body>
 </html>
