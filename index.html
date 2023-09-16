@@ -35,7 +35,7 @@
     <!--Pantalla-->
     <script>
         // Variables:
-        var nivel = 1;
+        var nivel = 3;
         var secondsRemaining = 0;
         var timerInterval;
         var paused = false;
@@ -131,7 +131,21 @@
                 }
                 if(nivel == 3){
                     mapas(mapa3);
-                    direccion(jugador1);
+                    contadorVidas(vidas_espacial);
+                    direccionEspacial(jugador2);
+                    updateEspacial(jugador2)
+                    enemigos(
+                        asteroide_1,
+                        asteroide_2,
+                        jugador2,
+                        asteroide_3,
+                        asteroide_4,
+                        asteroide_5,
+                        asteroide_6,
+                        asteroide_7,
+                        asteroide_8,
+                        asteroide_9);
+                    
 
                 }
 

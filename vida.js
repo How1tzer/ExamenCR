@@ -9,6 +9,11 @@ var hp = 3;
 const corazon = new Image();
 corazon.src = 'media/vida_default.png';
 
+//aire
+
+const aire = new Image();
+aire.src = 'media/vida_space.png';
+
 class vidas {
     constructor(outfit, vx, vy, height, width) {
         this.outfit = outfit;
@@ -20,6 +25,7 @@ class vidas {
 }
 
 const vidas_default = new vidas(corazon, 5, 5, 100, 100);
+const vidas_espacial = new vidas(aire, 5, 5, 100, 100);
 
 function contadorVidas(vidas) {
 

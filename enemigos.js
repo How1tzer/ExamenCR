@@ -34,7 +34,7 @@ hamsterRight.src = 'media/alienHamster_right.png';
 const asteroide = new Image();
 asteroide.src = 'media/asteroide.png';
 
-class carros {
+class mobs {
     constructor(outfit, cx, cy, height, width) {
         this.outfit = outfit;
         this.cx = cx;
@@ -45,51 +45,39 @@ class carros {
 }
 
 //Objetos de enemigos carro
-const carroAzul_left1 = new carros(blueLeft, 200, 565, 100, 100);
-const carroRed_left2 = new carros(redLeft, 700, 370, 100, 100);
-const carroRed_left3 = new carros(redLeft, 700, 80, 100, 100);
-const carroAzul_left4 = new carros(blueLeft, 500, 230, 100, 100);
-const blackRight5 = new carros(blackRight, 0, 511, 100, 100);
-const blackRight6 = new carros(blackRight, 100, 320, 100, 100);
-const blackRight7 = new carros(blackRight, 600, 420, 100, 100);
-const redRight8 = new carros(redRight, 300, 40, 100, 100);
-const redRight9 = new carros(redRight, 0, 130, 100, 100);
+const carroAzul_left1 = new mobs(blueLeft, 200, 565, 100, 100);
+const carroRed_left2 = new mobs(redLeft, 700, 370, 100, 100);
+const carroRed_left3 = new mobs(redLeft, 700, 80, 100, 100);
+const carroAzul_left4 = new mobs(blueLeft, 500, 230, 100, 100);
+const blackRight5 = new mobs(blackRight, 0, 511, 100, 100);
+const blackRight6 = new mobs(blackRight, 100, 320, 100, 100);
+const blackRight7 = new mobs(blackRight, 600, 420, 100, 100);
+const redRight8 = new mobs(redRight, 300, 40, 100, 100);
+const redRight9 = new mobs(redRight, 0, 130, 100, 100);
 
 //Objetos Hamster alienigenas
-const hamster_left1 = new carros(hamsterLeft, 200, 565, 100, 100);
-const hamster_left2 = new carros(hamsterLeft, 700, 370, 100, 100);
-const hamster_left3 = new carros(hamsterLeft, 700, 80, 100, 100);
-const hamster_left4 = new carros(hamsterLeft, 500, 230, 100, 100);
-const hamster_Right5 = new carros(hamsterRight, 0, 511, 100, 100);
-const hamster_Right6 = new carros(hamsterRight, 100, 320, 100, 100);
-const hamster_Right7 = new carros(hamsterRight, 600, 420, 100, 100);
-const hamster_Right8 = new carros(hamsterRight, 300, 40, 100, 100);
-const hamster_Right9 = new carros(hamsterRight, 0, 130, 100, 100);
+const hamster_left1 = new mobs(hamsterLeft, 200, 565, 100, 100);
+const hamster_left2 = new mobs(hamsterLeft, 700, 370, 100, 100);
+const hamster_left3 = new mobs(hamsterLeft, 700, 80, 100, 100);
+const hamster_left4 = new mobs(hamsterLeft, 500, 230, 100, 100);
+const hamster_Right5 = new mobs(hamsterRight, 0, 511, 100, 100);
+const hamster_Right6 = new mobs(hamsterRight, 100, 320, 100, 100);
+const hamster_Right7 = new mobs(hamsterRight, 600, 420, 100, 100);
+const hamster_Right8 = new mobs(hamsterRight, 300, 40, 100, 100);
+const hamster_Right9 = new mobs(hamsterRight, 0, 130, 100, 100);
 
 //asteroides
 
-const asteroide_1 = new carros(hamsterLeft, 200, 565, 100, 100);
-const asteroide_2 = new carros(hamsterLeft, 700, 370, 100, 100);
-const asteroide_3 = new carros(hamsterLeft, 700, 80, 100, 100);
-const asteroide_4 = new carros(hamsterLeft, 500, 230, 100, 100);
-const asteroide_5 = new carros(hamsterRight, 0, 511, 100, 100);
-const asteroide_6 = new carros(hamsterRight, 100, 320, 100, 100);
-const asteroide_7 = new carros(hamsterRight, 600, 420, 100, 100);
-const asteroide_8 = new carros(hamsterRight, 300, 40, 100, 100);
-const asteroide_9 = new carros(hamsterRight, 0, 130, 100, 100);
+const asteroide_1 = new mobs(asteroide, 200, 565, 100, 100);
+const asteroide_2 = new mobs(asteroide, 700, 370, 100, 100);
+const asteroide_3 = new mobs(asteroide, 700, 80, 100, 100);
+const asteroide_4 = new mobs(asteroide, 500, 230, 100, 100);
+const asteroide_5 = new mobs(asteroide, 0, 511, 100, 100);
+const asteroide_6 = new mobs(asteroide, 100, 320, 100, 100);
+const asteroide_7 = new mobs(asteroide, 600, 420, 100, 100);
+const asteroide_8 = new mobs(asteroide, 300, 40, 100, 100);
+const asteroide_9 = new mobs(asteroide, 0, 130, 100, 100);
 
-/*
-hamster_left1,
-hamster_left2,
-jugador1,
-hamster_left3,
-hamster_left4,
-hamster_Right5,
-hamster_Right6,
-hamster_Right7,
-hamster_Right8,
-hamster_Right9
-*/ 
 
 
 //funcion que los muestra en pantalla
