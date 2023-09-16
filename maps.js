@@ -20,11 +20,19 @@ map1.src = 'media/mapa1.png';
 const map2 = new Image();
 map2.src = 'media/mapa2.png';
 
+//mapa3
+const map3 = new Image();
+map3.src = 'media/mapa3.png';
+
 //mapas settings
 
 //mapa 1
 const mapa1 = new mapa(map1, 0, 0, 700, 700);
+//mapa 2
 const mapa2 = new mapa(map2, 0, 0, 700, 700);
+//mapa 3
+const mapa3 = new mapa(map2, 0, 0, 700, 700);
+
 
 
 

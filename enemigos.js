@@ -28,6 +28,12 @@ hamsterLeft.src = 'media/alienHamster_left.png';
 const hamsterRight = new Image();
 hamsterRight.src = 'media/alienHamster_right.png';
 
+//asteroide
+
+//hamster alienigena + right
+const asteroide = new Image();
+asteroide.src = 'media/asteroide.png';
+
 class carros {
     constructor(outfit, cx, cy, height, width) {
         this.outfit = outfit;
@@ -59,6 +65,18 @@ const hamster_Right6 = new carros(hamsterRight, 100, 320, 100, 100);
 const hamster_Right7 = new carros(hamsterRight, 600, 420, 100, 100);
 const hamster_Right8 = new carros(hamsterRight, 300, 40, 100, 100);
 const hamster_Right9 = new carros(hamsterRight, 0, 130, 100, 100);
+
+//asteroides
+
+const asteroide_1 = new carros(hamsterLeft, 200, 565, 100, 100);
+const asteroide_2 = new carros(hamsterLeft, 700, 370, 100, 100);
+const asteroide_3 = new carros(hamsterLeft, 700, 80, 100, 100);
+const asteroide_4 = new carros(hamsterLeft, 500, 230, 100, 100);
+const asteroide_5 = new carros(hamsterRight, 0, 511, 100, 100);
+const asteroide_6 = new carros(hamsterRight, 100, 320, 100, 100);
+const asteroide_7 = new carros(hamsterRight, 600, 420, 100, 100);
+const asteroide_8 = new carros(hamsterRight, 300, 40, 100, 100);
+const asteroide_9 = new carros(hamsterRight, 0, 130, 100, 100);
 
 /*
 hamster_left1,
