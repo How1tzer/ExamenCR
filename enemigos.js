@@ -1,4 +1,7 @@
 //enemigos
+//sonido
+
+
 
 //frame de carros
 
@@ -144,6 +147,8 @@ function enemigos(enemigo1,enemigo2,jugador,enemigo3,enemigo4,enemigo5,enemigo6,
             maxY = 0;
             maxX =0;
             hp-=1;
+            var damage = document.getElementById("damage");
+            damage.play();
         }
 
         if(enemigo2.cx + enemigo2.width >= jugador.jx   && 
@@ -156,6 +161,8 @@ function enemigos(enemigo1,enemigo2,jugador,enemigo3,enemigo4,enemigo5,enemigo6,
             maxY = 0;
             maxX =0;
             hp-=1;
+            var damage = document.getElementById("damage");
+            damage.play();
         }
 
         
@@ -169,6 +176,8 @@ function enemigos(enemigo1,enemigo2,jugador,enemigo3,enemigo4,enemigo5,enemigo6,
             maxY = 0;
             maxX =0;
             hp-=1;
+            var damage = document.getElementById("damage");
+            damage.play();
 
         }
 
@@ -182,6 +191,8 @@ function enemigos(enemigo1,enemigo2,jugador,enemigo3,enemigo4,enemigo5,enemigo6,
             maxY = 0;
             maxX =0;
             hp-=1;
+            var damage = document.getElementById("damage");
+            damage.play();
 
         }
 
@@ -195,6 +206,8 @@ function enemigos(enemigo1,enemigo2,jugador,enemigo3,enemigo4,enemigo5,enemigo6,
             maxY = 0;
             maxX =0;
             hp-=1;
+            var damage = document.getElementById("damage");
+            damage.play();
 
         }
 
@@ -208,6 +221,8 @@ function enemigos(enemigo1,enemigo2,jugador,enemigo3,enemigo4,enemigo5,enemigo6,
             maxY = 0;
             maxX =0;
             hp-=1;
+            var damage = document.getElementById("damage");
+            damage.play();
 
         }
 
@@ -221,6 +236,8 @@ function enemigos(enemigo1,enemigo2,jugador,enemigo3,enemigo4,enemigo5,enemigo6,
             maxY = 0;
             maxX =0;
             hp-=1;
+            var damage = document.getElementById("damage");
+            damage.play();
 
         }
 
@@ -234,6 +251,8 @@ function enemigos(enemigo1,enemigo2,jugador,enemigo3,enemigo4,enemigo5,enemigo6,
             maxY = 0;
             maxX =0;
             hp-=1;
+            var damage = document.getElementById("damage");
+            damage.play();
 
         }
 
@@ -247,6 +266,8 @@ function enemigos(enemigo1,enemigo2,jugador,enemigo3,enemigo4,enemigo5,enemigo6,
             maxY = 0;
             maxX =0;
             hp-=1;
+            var damage = document.getElementById("damage");
+            damage.play();
 
         }
 

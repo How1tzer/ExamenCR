@@ -24,6 +24,10 @@ map2.src = 'media/mapa2.png';
 const map3 = new Image();
 map3.src = 'media/mapa3.png';
 
+//mapa4
+const map4 = new Image();
+map4.src = 'media/mapa4.png';
+
 //mapas settings
 
 //mapa 1
@@ -31,7 +35,9 @@ const mapa1 = new mapa(map1, 0, 0, 700, 700);
 //mapa 2
 const mapa2 = new mapa(map2, 0, 0, 700, 700);
 //mapa 3
-const mapa3 = new mapa(map2, 0, 0, 700, 700);
+const mapa3 = new mapa(map3, 0, 0, 700, 700);
+//mapa 4
+const mapa4 = new mapa(map4, 0, 0, 700, 700);
 
 
 

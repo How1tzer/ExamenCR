@@ -31,15 +31,24 @@
     <script src="maps.js"></script>
     <script src="vida.js"></script>
     <script src="enemigos.js"></script>
+    <!--Musica-->
+    <audio id="nivel1" src="media/musica1.MP3" preload="auto"></audio>
+    <audio id="nivel2" src="media/musica2.MP3" preload="auto"></audio>
+    <audio id="nivel3" src="media/musica3.MP3" preload="auto"></audio>
+    <audio id="damage" src="media/damage.MP3" preload="auto"></audio>
 
     <!--Pantalla-->
     <script>
         // Variables:
-        var nivel = 3;
+        var nivel = 1;
         var secondsRemaining = 0;
         var timerInterval;
         var paused = false;
         var condicion = false;
+        const nivel1 = document.getElementById("nivel1");
+        const nivel2 = document.getElementById("nivel2");
+        const nivel3 = document.getElementById("nivel3");
+
 
         // Función de canvas:
         var canvas = document.getElementById('mycanvas');
@@ -77,12 +86,14 @@
 
             // Función para dibujar el tiempo en el canvas:
             function drawTime() {
+                if(nivel<4){
                 ctx.fillStyle = 'white';
                 ctx.font = '18px Arial';
                 ctx.fillText("Tiempo:", 530, 30);
                 const displayMinutes = Math.floor(secondsRemaining / 60);
                 const displaySeconds = secondsRemaining % 60;
                 ctx.fillText(`${String(displayMinutes).padStart(2, '0')}:${String(displaySeconds).padStart(2, '0')}`,530,50);
+                }
             }
 
             // Pantalla
@@ -98,6 +109,7 @@
                     direccion(jugador1);
                     update(jugador1);
                     contadorVidas(vidas_default);
+                    nivel1.play();
                     enemigos(
                         carroAzul_left1,
                         carroRed_left2,
@@ -117,6 +129,8 @@
                     direccion(jugador1);
                     update(jugador1);
                     contadorVidas(vidas_default);
+                    nivel1.pause();
+                    nivel2.play();
                     enemigos(
                         hamster_left1,
                         hamster_left2,
@@ -133,6 +147,8 @@
                     mapas(mapa3);
                     contadorVidas(vidas_espacial);
                     direccionEspacial(jugador2);
+                    nivel2.pause();
+                    nivel3.play();
                     updateEspacial(jugador2)
                     enemigos(
                         asteroide_1,
@@ -145,8 +161,11 @@
                         asteroide_7,
                         asteroide_8,
                         asteroide_9);
-                    
-
+    
+                }
+                if(nivel ==4){
+                    final()
+                    mapas(mapa4);
                 }
 
                 // Dibujar el tiempo

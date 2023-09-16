@@ -5,7 +5,7 @@ var moveUp = false;
 var moveDown = false;
 var moveLeft = false;
 var moveRight = false;
-const velocidadJugador = 3; 
+const velocidadJugador = 2; 
 
 //capacidad de movimiento default
 var maxY = 0; //max 13
@@ -204,5 +204,20 @@ function updateEspacial(jugador) {
     if(jugador.jy<50){
         nivel = nivel+1;
     }
+}
+
+function final(){
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "r") { // w
+            return location.reload(true);
+        }
+        
+    });
+    document.addEventListener("keyup", (e) => {
+        if (e.key === "r") { // w
+            return location.reload(true);
+        }
+        
+    });
 }
 
